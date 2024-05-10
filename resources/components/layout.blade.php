@@ -10,5 +10,6 @@
 <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 <body>
-    
+    <p>testing</p>
 </body>
+</html>
