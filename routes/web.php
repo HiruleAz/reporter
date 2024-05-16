@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/hello', function () {
-    return 'Hellow World';
+    return 'Hello World';
 });
 
 Route::get('/card', function () {
