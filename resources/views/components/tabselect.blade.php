@@ -1,4 +1,4 @@
-<div id="tab" class="bg-white border">
-        <button class="transition ease-in-out bg-gray-300  hover:bg-gray-400 p-2 rounded-full"></button>
-        <button class="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">Show Graph</button>
-</div>
+<ul id="tab" class="nav nav-tabs bg-blue-200 content-center flex justify-center items-center" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
+        <li class="active transition ease-in-out left-8 bg-gray-300  hover:bg-gray-400 p-2 w-1/2 rounded-md border-2 border-gray-400 active:bg-violet-700 focus:isolate focus:outline-none focus:ring focus:bg-violet-300 flex justify-center">Show Table</li>
+        <li class="transition ease-in-out bg-gray-300  hover:bg-gray-400 p-2 w-1/2 rounded-md border-2 border-gray-400 active:bg-violet-700 focus:outline-none focus:ring focus:bg-violet-300 flex justify-center">Show Graph</li>
+</ul>
