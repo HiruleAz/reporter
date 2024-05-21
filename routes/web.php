@@ -21,6 +21,6 @@ Route::get('/hello', function () {
     return 'Hello World';
 });
 
-Route::get('/card', function () {
-    return view('card');
+Route::get('/table', function () {
+    return view('table');
 });
