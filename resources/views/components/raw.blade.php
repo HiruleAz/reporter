@@ -71,7 +71,7 @@
 
   <!-- table body starts -->
   <div class="flex items-center justify-center border-[1px] ">1</div>
-  <div class="row-span-3 col-span-2 flex items-center justify-center border-[1px]">Zero Values</div>
+  <div class="row-span-3 col-span-2 flex items-center justify-center border-[1px]">Zero Values (< 5% ELV)</div>
   <div class="flex items-center justify-center border-[1px] ">0.00</div>
   <div class="flex items-center justify-center border-[1px] ">N/A</div>
   <div class="flex items-center justify-center border-[1px] ">N/A</div>

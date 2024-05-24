@@ -24,3 +24,11 @@ Route::get('/hello', function () {
 Route::get('/table', function () {
     return view('table');
 });
+
+Route::get('/standard', function () {
+    return view('standardised');
+});
+
+Route::get('/outlier', function () {
+    return view('outlier');
+});
