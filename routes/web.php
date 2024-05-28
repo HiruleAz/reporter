@@ -32,3 +32,15 @@ Route::get('/standard', function () {
 Route::get('/outlier', function () {
     return view('outlier');
 });
+
+Route::get('/calibration', function () {
+    return view('calibration');
+});
+
+Route::get('/derived', function () {
+    return view('derived');
+});
+
+Route::get('/variability', function () {
+    return view('variability');
+});
