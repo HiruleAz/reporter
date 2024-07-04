@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LineChartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +45,11 @@ Route::get('/derived', function () {
 Route::get('/variability', function () {
     return view('variability');
 });
+
+Route::get('/line-chart', [LineChartController::class, 'lineChart']);
+
+Route::get('/rawg', function () {
+    return view('rawg');
+});
+
+Route::get('chart', [ChartJSController::class, 'index']);
