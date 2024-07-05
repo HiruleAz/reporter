@@ -60,11 +60,17 @@
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: @json($data['labels']),
+                labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21 ],
                 datasets: [{
-                    label: 'Data',
-                    data: @json($data['data']),
-                    borderColor: 'rgba(75, 192, 192, 1)',
+                    label: 'CEMS',
+                    data: [0,0,0, 233.59, 243.36, 226.34, 248.42, 254.22, 257.08, 272.13, 344.45, 332.33, 316.97, 301.04, 301.21, 251.50, 257.09, 259.44, 260.96, 271.65, 239.68],
+                    borderColor: 'rgba(224, 13, 13, 0.8)',
+                    borderWidth: 1,
+                    fill: false
+                },{
+                    label: 'SRM',
+                    data: [0.02,0.02,0.04, 240.01, 249.77, 229.16, 254.79, 260.55, 263.44, 275.45, 348.63, 336.34, 320.73, 304.59, 304.78, 255.33, 261.01, 263.33, 264.94, 275.70, 243.74],
+                    borderColor: 'rgba(23, 73, 232, 0.8)',
                     borderWidth: 1,
                     fill: false
                 }]
@@ -72,7 +78,11 @@
             options: {
                 scales: {
                     y: {
-                        beginAtZero: true
+                        beginAtZero: true,
+                        ticks: {
+                            min: 0, // minimum value
+                            max: 500 // maximum value
+                        }
                     }
                 }
             }

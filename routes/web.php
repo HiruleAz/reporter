@@ -46,10 +46,6 @@ Route::get('/variability', function () {
     return view('variability');
 });
 
-Route::get('/line-chart', [LineChartController::class, 'lineChart']);
-
-Route::get('/rawg', function () {
-    return view('rawg');
-});
+Route::get('/rawg', [LineChartController::class, 'lineChart']);
 
 Route::get('chart', [ChartJSController::class, 'index']);
