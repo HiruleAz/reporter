@@ -52,39 +52,38 @@
 </head>
 <body>
     <div style="width: 80%; margin: auto;">
-        <canvas id="lineChart"></canvas>
+        <canvas id="calibrateChart"></canvas>
     </div>
 
     <script>
-        var ctx = document.getElementById('lineChart').getContext('2d');
+        var ctx = document.getElementById('calibrateChart').getContext('2d');
+        // var xyValues = {
+        //     {
+
+        //     }
+        // }
+
         var myChart = new Chart(ctx, {
-            type: 'line',
+            type: 'scatter',
             data: {
-                labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21],
+                labels: [0, 0, 0, 181.67, 192.79, 203.73, 208.66, 213.85, 223.96, 277.76, 269.23, 263.59, 252.95, 250.26, 207.35, 209.19, 215.68, 212.57, 226.57, 175.77],
                 datasets: [{
-                    label: 'CEMS',
-                    data: [0,0,0, 233.59, 243.36, 226.34, 248.42, 254.22, 257.08, 272.13, 344.45, 332.33, 316.97, 301.04, 301.21, 251.50, 257.09, 259.44, 260.96, 271.65, 239.68],
-                    borderColor: 'rgba(224, 13, 13, 0.8)',
-                    borderWidth: 2,
-                    pointStyle: 'rectRot',
-                    backgroundColour: 'FFFFFF',
-                    fill: false
-                },{
-                    label: 'SRM',
-                    data: [0.02,0.02,0.04, 240.01, 249.77, 229.16, 254.79, 260.55, 263.44, 275.45, 348.63, 336.34, 320.73, 304.59, 304.78, 255.33, 261.01, 263.33, 264.94, 275.70, 243.74],
+                    label: 'Linear (CEMS vs SRM)',
+                    data: [0, 0, 0, 181.87, 192.96, 203.91, 208.84, 214.04, 224.16, 278.01, 269.46, 263.82, 253.17, 250.48, 207.53, 209.37, 215.87, 212.75, 226.77, 175.93],
                     borderColor: 'rgba(23, 73, 232, 0.8)',
-                    borderWidth: 2,
-                    backgroundColour: 'FFFFFF',
+                    borderWidth: 3,
                     pointStyle: 'rectRot',
-                    fill: false
+                    backgroundColor: '#9BD0F5',
+                    pointRadius: 5,
+                    fill: false,
+                    showLine: true
                 }]
             },
             options: {
                 plugins: {
                     title: {
                         display: true,
-                        text: 'PLOT 1: Time series of standardised CEM versus standardised SRM data',
-                        padding: 30,
+                        text: 'CALIBRATION FUNCTION & REGRESSION OF THE CALIBRATION FUNCTION',
                         font: {
                                 size: 18,
                                 weight: 'bold'
@@ -103,29 +102,38 @@
                     y: {
                         title:{
                             display: true,
-                            text: 'CEMS & SRM, mg/m3',
+                            text: 'Y, SRM in mg/m3',
                             font: {
                                 size: 15,
                                 weight: 'bold'
                             },
                         },
-                        beginAtZero: true,
+                        beginAtZero: false,
+                        min: 0,
+                        max: 300.00,
                         ticks: {
-                            min: 0, // minimum value
-                            max: 500 // maximum value
+                        stepSize: 50.00
                         }
                     },
                     x: {
                         title:{
                             display: true,
-                            text: 'Sample Runs',
+                            text: 'X, CEMS in mg/m3',
                             font: {
                                 size: 15,
                                 weight: 'bold'
-                            },
+                            }
                         },
+                        beginAtZero: true,
+                        min: 0,
+                        max: 300.00,
+                        ticks: {
+                        stepSize: 50.00
+                        }
+                        
                     }
-                }
+                },
+                
             }
         });
     </script>

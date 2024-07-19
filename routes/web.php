@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\CalibrateChartController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LineChartController;
+use App\Http\Controllers\StandardChartController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -47,5 +50,11 @@ Route::get('/variability', function () {
 });
 
 Route::get('/rawg', [LineChartController::class, 'lineChart']);
+
+Route::get('/standardg', [StandardChartController::class, 'standardChart']);
+
+Route::get('/calibrationg', [CalibrateChartController::class, 'calibrateChart']);
+
+Route::get('google-line-chart', 'HomeController@googleLineChart');
 
 Route::get('chart', [ChartJSController::class, 'index']);
