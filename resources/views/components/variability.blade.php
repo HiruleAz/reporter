@@ -1,25 +1,24 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
-<div class="m-4 grid grid-cols-8 bg-gray-50 border border-1 mx-auto">
+<div class="m-4 grid grid-cols-8 bg-gray-50 border border-1 mx-auto w-4/5">
   <!-- table head starts -->
-  <div class="row-span-4 flex items-center justify-center border-[1px]">Sample</div>
-  <div class="row-span-2 col-span-2 flex items-center justify-center border-[1px] ">Date & Time</div>
-  <div class=" flex items-center justify-center border-[1px] ">CEMS (xi)</div>
-  <div class="flex items-center justify-center border-[1px] ">SRM (yi)</div>
-  <div class="row-span-4 flex items-center justify-center border-[1px] ">D = (xi - yi)</div>
-  <div class="row-span-4 flex items-center justify-center border-[1px] ">D - D̅</div>
-  <div class="row-span-4 flex items-center justify-center border-[1px] ">(D - D̅)²</div>
+  <div class="row-span-4 flex items-center justify-center border-[1px] font-medium">Sample</div>
+  <div class="row-span-4 col-span-2 flex items-center justify-center border-[1px] font-medium">Date & Time</div>
+  <div class=" flex items-center justify-center border-[1px] font-medium">CEMS (xi)</div>
+  <div class="flex items-center justify-center border-[1px] font-medium">SRM (yi)</div>
+  <div class="row-span-4 flex items-center justify-center border-[1px] font-medium">D = (xi - yi)</div>
+  <div class="row-span-4 flex items-center justify-center border-[1px] font-medium">D - D̅</div>
+  <div class="row-span-4 flex items-center justify-center border-[1px] font-medium">(D - D̅)²</div>
 
-  <div class="row-span-3 flex items-center justify-center border-[1px] text-center ">Calibrated Value at Standard Condition (mg/m3)</div>
-  <div class="row-span-3 flex items-center justify-center border-[1px] text-center">Standardised & Corrected Value (mg/m3)</div>
-  <div class="row-span-2 flex items-center justify-center border-[1px] ">Start</div>
-  <div class=" row-span-2 flex items-center justify-center border-[1px] ">End</div>
+  <div class="row-span-3 flex items-center justify-center border-[1px] text-center font-medium">Calibrated Value at Standard Condition (mg/m3)</div>
+  <div class="row-span-3 flex items-center justify-center border-[1px] text-center font-medium">Standardised & Corrected Value (mg/m3)</div>
+
   
 <!-- table head ends -->
 
   <!-- table body starts -->
   <div class="flex items-center justify-center border-[1px] ">1</div>
-  <div class="row-span-3 col-span-2 flex items-center justify-center border-[1px]">Surrogate Zero Values</div>
+  <div class="row-span-3 col-span-2 flex items-center justify-center border-[1px] font-medium">Surrogate Zero Values</div>
   <div class="flex items-center justify-center border-[1px] ">0.00</div>
   <div class="flex items-center justify-center border-[1px] ">0.00</div>
   <div class="flex items-center justify-center border-[1px] ">0.00</div>
@@ -43,7 +42,7 @@
   <!-- Linearity Data starts here -->
 
   <div class="flex items-center justify-center border-[1px] ">not used</div>
-  <div class="row-span-5 col-span-2 flex items-center justify-center border-[1px]">Linearity Data (mg/mg3)</div>
+  <div class="row-span-5 col-span-2 flex items-center justify-center border-[1px] font-medium">Linearity Data (mg/mg3)</div>
   <div class="flex items-center justify-center border-[1px] ">0.00</div>
   <div class="flex items-center justify-center border-[1px] ">0.00</div>
   <div class="flex items-center justify-center border-[1px]">0.00</div>
@@ -242,6 +241,14 @@
   <div class="flex items-center justify-center border-[1px] ">0.00</div>
   <div class="flex items-center justify-center border-[1px] ">0.00</div>
   <div class="flex items-center justify-center border-[1px] ">0.00</div>
+
+  <div class="col-span-2 flex items-center justify-center border-[1px]"></div>
+  <div class="flex items-center justify-center border-[1px] ">Max</div>
+  <div class="flex items-center justify-center border-[1px] font-medium">0.00</div>
+  <div class="flex items-center justify-center border-[1px] font-medium">0.00</div>
+  <div class="flex items-center justify-center border-[1px] font-medium">0.00</div>
+  <div class="flex items-center justify-center border-[1px] ">0.00</div>
+  <div class="flex items-center justify-center border-[1px] font-medium">0.00</div>
 
     <!-- table body ends -->
 </div>

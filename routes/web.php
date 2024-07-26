@@ -49,7 +49,7 @@ Route::get('/variability', function () {
     return view('variability');
 });
 
-Route::get('/rawg', [LineChartController::class, 'lineChart']);
+Route::get('/standardisedg', [LineChartController::class, 'lineChart']);
 
 Route::get('/standardg', [StandardChartController::class, 'standardChart']);
 

@@ -30,9 +30,17 @@
 </form>
 <div>
 
-<x-raw>
-  
-</x-raw>
+<x-raw></x-raw>
+
+<x-standardised></x-standardised>
+
+<x-outlier></x-outlier>
+
+<x-calibration></x-calibration>
+
+<x-derived></x-derived>
+
+<x-variability></x-variability>
 
 </div>
 </body>
