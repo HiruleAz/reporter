@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CalibrateChartController;
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LineChartController;
 use App\Http\Controllers\StandardChartController;
@@ -18,7 +19,8 @@ use App\Http\Controllers\StandardChartController;
 */
 
 Route::get('/', function () {
-    return view('index');
+
+    return view('index',  [IndexController::class, 'table']);
 });
 
 Route::get('/hello', function () {
