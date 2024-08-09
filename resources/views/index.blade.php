@@ -42,6 +42,8 @@
 
 <x-variability></x-variability>
 
+<!-- graph -->
+
 </div>
 </body>
 </html>

@@ -51,6 +51,10 @@ Route::get('/variability', function () {
     return view('variability');
 });
 
+Route::get('/testrun', function () {
+    return view('testrun');
+});
+
 Route::get('/standardisedg', [LineChartController::class, 'lineChart']);
 
 Route::get('/standardg', [StandardChartController::class, 'standardChart']);
