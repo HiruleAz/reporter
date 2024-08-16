@@ -270,3 +270,27 @@
   <div class="flex items-center justify-center border-[1px] ">0.00</div>
     <!-- table body ends -->
 </div>
+
+<table class="m-4 grid grid-cols-9 bg-gray-50 border border-1 mx-auto w-4/5">
+    <thead>
+        <tr>
+        <th class="row-span-2 flex items-center justify-center border-[1px] font-medium">Sample</th>
+  <th class=" col-span-2 flex items-center justify-center border-[1px] font-medium">Date & Time</th>
+  <th class=" col-span-2 flex items-center justify-center border-[1px] font-medium">Raw Data</th>
+  <th class="row-span-2 flex items-center justify-center border-[1px] font-medium">xi - x̄</th>
+  <th class="row-span-2 flex items-center justify-center border-[1px] font-medium">yi - ȳ</th>
+  <th class="row-span-2 flex items-center justify-center border-[1px] font-medium">(xi - x̄) x (yi - ȳ)</th>
+  <th class="row-span-2 flex items-center justify-center border-[1px] font-medium">(xi - x̄)²</th>
+
+  <th class="flex items-center justify-center border-[1px] font-medium">Start</th>
+  <th class="flex items-center justify-center border-[1px] font-medium">End</th>
+
+  <th class=" flex items-center justify-center border-[1px] font-medium">CEMS (xi)</th>
+  <th class="flex items-center justify-center border-[1px] font-medium">SRM (yi)</th>
+            <!-- Add more columns as needed -->
+        </tr>
+    </thead>
+    <tbody>
+       
+    </tbody>
+</table>

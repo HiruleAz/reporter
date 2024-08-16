@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\CalibrateChartController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\TestRunController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LineChartController;
+use App\Http\Controllers\ShowController;
 use App\Http\Controllers\StandardChartController;
 
 
@@ -51,9 +53,15 @@ Route::get('/variability', function () {
     return view('variability');
 });
 
-Route::get('/testrun', function () {
-    return view('testrun');
-});
+Route::post('/testrun', [TestRunController::class, 'store']);
+
+Route::get('/testrun', [TestRunController::class, 'index']);
+
+Route::resource('entry', 'EntryController');
+
+// Route::get('/testrun', function () {
+//     return view('testrun');
+// });
 
 Route::get('/standardisedg', [LineChartController::class, 'lineChart']);
 

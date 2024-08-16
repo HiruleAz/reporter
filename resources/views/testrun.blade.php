@@ -1,49 +1,5 @@
-<script src="https://cdn.tailwindcss.com"></script>
 
-<!-- <div id="raw" class="tabcontent w-1/2 mx-auto content-center flex justify-center items-center">
-  <div colspan={5} class="border-2 w-auto row-span-2 border-slate-300">Sample</>
-  <div class="border-2 border-slate-300">Date & Time</div>
-  <div rowspan={3} class="border-2 row-span-3 border-slate-300">CEMS</div>
-  <div class="border-2 border-slate-300">SRM</div>
-  <tr>
-    <th class="border-2 border-slate-300">Test</th>
-    <th class="border-2 border-slate-300">(xi)</th>
-    <th class="border-2 border-slate-300">O2</th>
-    <th class="border-2 border-slate-300">H2O</th>
-    <th class="border-2 border-slate-300">(yi)</th>
-    <th class="border-2 border-slate-300">O2</th>
-    <th class="border-2 border-slate-300">H2O</th>
-  </tr>
-  <tr>
-    <th class="border-2 border-slate-300">Test</th>
-    <th class="border-2 border-slate-300">Start</th>
-    <th class="border-2 border-slate-300">End</th>
-    <th class="border-2 border-slate-300">mg/m3</th>
-    <th class="border-2 border-slate-300">%</th>
-    <th class="border-2 border-slate-300">%</th>
-    <th class="border-2 border-slate-300">mg/m3</th>
-    <th class="border-2 border-slate-300">%</th>
-    <th class="border-2 border-slate-300">%</th>
-  </tr>
-  <tbody class="border-2 border-slate-300">
-    <tr class="border-2 border-slate-300">
-      <td class="border-2 border-slate-300">The Sliding Mr. Bones</td>
-      <td>Malcolm Lockyer</td>
-      <td>1961</td>
-    </tr>
-    <tr class="border-2 border-slate-300">
-      <td>Witchy Woman</td>
-      <td>The Eagles</td>
-      <td>1972</td>
-    </tr>
-    <tr class="border-2 border-slate-300">
-      <td>Shining Star</td>
-      <td>Earth, Wind, and Fire</td>
-      <td>1975</td>
-    </tr>
-  </tbody>
-</div>
-</div> -->
+<script src="https://cdn.tailwindcss.com"></script>
 
 <!-- <link rel="stylesheet" href="https://stackoverflow.com/questions/72955073/how-to-group-table-rows-in-html-css-tailwind"> -->
 
@@ -72,7 +28,7 @@
 <!-- table head ends -->
 
   <!-- table body starts -->
-  <div class="flex items-center justify-center border-[1px] ">1</div>
+  <!-- <div class="flex items-center justify-center border-[1px] ">1</div>
   <div class="row-span-3 col-span-2 flex items-center justify-center border-[1px] font-medium">Zero Values (< 5% ELV)</div>
   <div class="flex items-center justify-center border-[1px] ">0.00</div>
   <div class="flex items-center justify-center border-[1px] ">N/A</div>
@@ -95,11 +51,11 @@
   <div class="flex items-center justify-center border-[1px] ">N/A</div>
   <div class="flex items-center justify-center border-[1px] ">0.00</div>
   <div class="flex items-center justify-center border-[1px] ">N/A</div>
-  <div class="flex items-center justify-center border-[1px] ">N/A</div>
+  <div class="flex items-center justify-center border-[1px] ">N/A</div> -->
 
   <!-- Linearity Data starts here -->
 
-  <div class="flex items-center justify-center border-[1px] ">not used</div>
+  <!-- <div class="flex items-center justify-center border-[1px] ">not used</div>
   <div class="row-span-5 col-span-2 flex items-center justify-center border-[1px] font-medium">Linearity Data (mg/mg3)</div>
   <div class="flex items-center justify-center border-[1px] ">0.00</div>
   <div class="flex items-center justify-center border-[1px] ">N/A</div>
@@ -138,11 +94,11 @@
   <div class="flex items-center justify-center border-[1px] ">N/A</div>
   <div class="flex items-center justify-center border-[1px] ">0.00</div>
   <div class="flex items-center justify-center border-[1px] ">N/A</div>
-  <div class="flex items-center justify-center border-[1px] ">N/A</div>
+  <div class="flex items-center justify-center border-[1px] ">N/A</div> -->
 
     <!-- Where the rest of data starts -->
 
-  <div class="flex items-center justify-center border-[1px] ">4</div>
+  <!-- <div class="flex items-center justify-center border-[1px] ">4</div>
   <div class="flex items-center justify-center border-[1px] ">02.12.2021 08:00</div>
   <div class="flex items-center justify-center border-[1px] ">02.12.2021 8:29</div>
   <div class="flex items-center justify-center border-[1px] ">mg/m3</div>
@@ -320,7 +276,66 @@
   <div class="flex items-center justify-center border-[1px] ">%</div>
   <div class="flex items-center justify-center border-[1px] ">mg/m3</div>
   <div class="flex items-center justify-center border-[1px] ">%</div>
-  <div class="flex items-center justify-center border-[1px] ">%</div>
+  <div class="flex items-center justify-center border-[1px] ">%</div> -->
 
     <!-- table body ends -->
+<!-- </div> -->
+
+<!-- <div class="row">
+  <div class="col-md-12">
+    <br />
+    <h3>Gas Data</h3>
+    <br /> -->
+    
+    <!-- <table class="table-bordered  border border-1 mx-auto w-4/5 text-center grid grid-cols-9">
+      <tr class="border-[1px] bg-gray-100">
+        <th class="border-[1px] p-4">Sample</th>
+        <th class="border-[1px] p-4">start</th>
+        <th class="border-[1px] p-4">end</th>
+        <th class="border-[1px] p-4">gastype</th>
+        <th class="border-[1px] p-4">xi</th>
+        <th class="border-[1px] p-4">O2</th>
+        <th class="border-[1px] p-4">H2O</th>
+        <th class="border-[1px] p-4">yi</th>
+        <th class="border-[1px] p-4">O2</th>
+        <th class="border-[1px] p-4">H2O</th>
+      </tr> -->
+
+      @foreach($entries as $entry)
+       <!-- <tr class="border-[1px]">
+        <td class="border-[1px] p-2">{{$entry->sampleno}}</td>
+        <td class="border-[1px] p-2">{{$entry->start}}</td>
+        <td class="border-[1px] p-2">{{$entry->end}}</td>
+        <td class="border-[1px] p-2">{{$entry->gastype}}</td>
+        <td class="border-[1px] p-2">{{$entry->cemsmg}}</td>
+        <td class="border-[1px] p-2">{{$entry->cemsO2}}</td>
+        <td class="border-[1px] p-2">{{$entry->cemsH2O}}</td>
+        <td class="border-[1px] p-2">{{$entry->srmmg}}</td>
+        <td class="border-[1px] p-2">{{$entry->srmO2}}</td>
+        <td class="border-[1px] p-2">{{$entry->srmH2O}}</td> -->
+        
+        @if ($entry->sampleno === 1 || $entry->sampleno === 2 || $entry->sampleno === 3)
+          <div class="flex items-center justify-center border-[1px] ">{{$entry->sampleno}}</div>
+          <div class="flex items-center justify-center border-[1px] col-span-2 font-medium">Zero Values [< 5% ELV]</div>
+        @elseif (is_null($entry->sampleno))
+          <div class="flex items-center justify-center border-[1px] ">Not used</div>
+          <div class="flex items-center justify-center border-[1px] col-span-2 font-medium">Linearity Data [mg/mg3]</div>
+        @else
+          <div class="flex items-center justify-center border-[1px] ">{{$entry->sampleno}}</div>
+          <div class="flex items-center justify-center border-[1px] ">{{$entry->start}}</div>
+          <div class="flex items-center justify-center border-[1px] ">{{$entry->end}}</div>
+        @endif
+
+          <div class="flex items-center justify-center border-[1px] ">{{$entry->cemsmg}}</div>
+          <div class="flex items-center justify-center border-[1px] ">{{$entry->cemsO2}}</div>
+          <div class="flex items-center justify-center border-[1px] ">{{$entry->cemsH2O}}</div>
+          <div class="flex items-center justify-center border-[1px] ">{{$entry->srmmg}}</div>
+          <div class="flex items-center justify-center border-[1px] ">{{$entry->srmO2}}</div>
+          <div class="flex items-center justify-center border-[1px] ">{{$entry->srmH2O}}</div>
+      </tr> 
+      @endforeach
+
+    <!-- </table>
+  </div> -->
 </div>
+
