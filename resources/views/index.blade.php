@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+  @vite(['resources/js/app.js'])
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
@@ -38,16 +38,10 @@
 
 <x-raw></x-raw>
 
-<x-standardised></x-standardised>
-
-<x-outlier></x-outlier>
-
-<x-derived></x-derived>
-
-<x-variability></x-variability>
-
 <!-- graph -->
 
 </div>
+
 </body>
 </html>
+

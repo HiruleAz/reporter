@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class TableController extends Controller
+class EntryController extends Controller
 {
     public function index(){
-        $students = Student::all()->toArray();
-        return view('student.index', compact('students')); 
+        $entries = EntryController::all()->toArray();
+        return view('entry.index', compact('entries')); 
     }
 
     public function create(){
-        return view('table.create');
+        return view('entry.create');
     }
 
     public function store(Request $request){

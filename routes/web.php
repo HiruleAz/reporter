@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LineChartController;
 use App\Http\Controllers\ShowController;
 use App\Http\Controllers\StandardChartController;
+use App\Livewire\Counter;
 
 
 /*
@@ -53,11 +54,17 @@ Route::get('/variability', function () {
     return view('variability');
 });
 
+Route::get('/modal', function () {
+    return view('modal');
+});
+
 Route::post('/testrun', [TestRunController::class, 'store']);
 
 Route::get('/testrun', [TestRunController::class, 'index']);
 
 Route::resource('entry', 'EntryController');
+
+Route::get('/counter', Counter::class);
 
 // Route::get('/testrun', function () {
 //     return view('testrun');
