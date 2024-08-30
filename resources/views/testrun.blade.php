@@ -317,14 +317,27 @@
         @if ($entry->sampleno === 1 || $entry->sampleno === 2 || $entry->sampleno === 3)
           <div class="flex items-center justify-center border-[1px] ">{{$entry->sampleno}}</div>
           <div class="flex items-center justify-center border-[1px] col-span-2 font-medium">Zero Values [< 5% ELV]</div>
+
+          <div class="flex items-center justify-center border-[1px] ">{{$entry->cemsmg}}</div>
+          <div class="flex items-center justify-center border-[1px] ">N/A</div>
+          <div class="flex items-center justify-center border-[1px] ">N/A</div>
+          <div class="flex items-center justify-center border-[1px] ">{{$entry->srmmg}}</div>
+          <div class="flex items-center justify-center border-[1px] ">N/A</div>
+          <div class="flex items-center justify-center border-[1px] ">N/A</div>
         @elseif (is_null($entry->sampleno))
           <div class="flex items-center justify-center border-[1px] ">Not used</div>
           <div class="flex items-center justify-center border-[1px] col-span-2 font-medium">Linearity Data [mg/mg3]</div>
+
+          <div class="flex items-center justify-center border-[1px] ">{{$entry->cemsmg}}</div>
+          <div class="flex items-center justify-center border-[1px] ">N/A</div>
+          <div class="flex items-center justify-center border-[1px] ">N/A</div>
+          <div class="flex items-center justify-center border-[1px] ">{{$entry->srmmg}}</div>
+          <div class="flex items-center justify-center border-[1px] ">N/A</div>
+          <div class="flex items-center justify-center border-[1px] ">N/A</div>
         @else
           <div class="flex items-center justify-center border-[1px] ">{{$entry->sampleno}}</div>
           <div class="flex items-center justify-center border-[1px] ">{{$entry->start}}</div>
           <div class="flex items-center justify-center border-[1px] ">{{$entry->end}}</div>
-        @endif
 
           <div class="flex items-center justify-center border-[1px] ">{{$entry->cemsmg}}</div>
           <div class="flex items-center justify-center border-[1px] ">{{$entry->cemsO2}}</div>
@@ -332,7 +345,8 @@
           <div class="flex items-center justify-center border-[1px] ">{{$entry->srmmg}}</div>
           <div class="flex items-center justify-center border-[1px] ">{{$entry->srmO2}}</div>
           <div class="flex items-center justify-center border-[1px] ">{{$entry->srmH2O}}</div>
-      </tr> 
+        @endif
+
       @endforeach
 
     <!-- </table>

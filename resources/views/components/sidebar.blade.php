@@ -6,13 +6,14 @@
         <button class="bg-blue-100 absolute bottom-24 w-40 h-12 rounded-full border-2 border-blue-300">Edit current ID</button>
         <button class="bg-red-100 absolute bottom-8 w-40 h-12 rounded-full border-2 border-red-300">Delete current ID</button>
 </div> -->
-<nav class="flex h-12 text-center text-align-center justify-center items-center font-mono text-lg text-white font-semibold bg-purple-500 w-5/6 shadow-xl shadow-blue-gray-900/5">
+<nav class="flex h-12 text-center justify-center items-center rounded-sm font-mono text-lg text-white font-semibold bg-purple-500 w-full shadow-xl shadow-blue-gray-900/5">
     <ul class="flex w-full">
-      <li class="nav-item w-full h-12 transition-all hover:bg-purple-700 active:shadow-inner active:shadow-purple-800/10">
-        <a class="nav-link" href="#">Show Table</a>
+      <li class="nav-item w-full h-12 transition-all hover:bg-purple-700 hover:rounded-sm active:shadow-inner active:shadow-purple-800/10">
+      
+        <a class="nav-link pt-2 pb-2" href="#">Show Table</a>
       </li>
-      <li class="nav-item w-full h-12 transition-all hover:bg-purple-700">
-        <a class="nav-link" href="#">Show Graph</a>
+      <li class="nav-item w-full h-12 transition-all hover:bg-purple-700 hover:rounded-sm">
+        <a class="nav-link pt-2 pb-2" href="#">Show Graph</a>
       </li>
     </ul>
 </nav>
@@ -25,7 +26,7 @@
     </svg>
     <h5 class="flex antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-gray-200 text-center">Report Generator</h5>  
   </div>
-  <nav class="flex flex-col gap-1 min-w-[240px] p-2 font-sans text-base font-normal text-gray-700">
+  <nav class="flex flex-col gap-1 min-w-[240px] p-2 font-sans text-base font-normal space-y-1.5 text-gray-700">
     <div role="button" class="flex items-center p-3 space-x-2 rounded-lg text-start leading-tight transition-all font-medium hover:bg-gray-300 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
       <svg class="w-6 h-6 text-gray-800 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
         <path fill-rule="evenodd" d="M4 4a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2v14a1 1 0 1 1 0 2H5a1 1 0 1 1 0-2V5a1 1 0 0 1-1-1Zm5 2a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H9Zm5 0a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-1Zm-5 4a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1H9Zm5 0a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1h-1Zm-3 4a2 2 0 0 0-2 2v3h2v-3h2v3h2v-3a2 2 0 0 0-2-2h-2Z" clip-rule="evenodd"/>
@@ -110,7 +111,7 @@
 
 <!-- Modal toggle -->
 <!-- Modal toggle -->
-    <button id="edit-btn" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="flex justify-center space-x-1 p-3 rounded-lg leading-tight text-lg font-semibold transition-all hover:bg-blue-600 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-gray-200 focus:text-blue-900 active:text-white outline-none bg-blue-400" type="button">
+    <button id="edit-btn" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="flex justify-center p-3 rounded-lg leading-tight text-lg font-semibold transition-all hover:bg-blue-600 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-gray-200 focus:text-blue-900 active:text-white outline-none bg-blue-400" type="button">
       <svg class="w-6 h-6  text-gray-200 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
         <path fill-rule="evenodd" d="M11.32 6.176H5c-1.105 0-2 .949-2 2.118v10.588C3 20.052 3.895 21 5 21h11c1.105 0 2-.948 2-2.118v-7.75l-3.914 4.144A2.46 2.46 0 0 1 12.81 16l-2.681.568c-1.75.37-3.292-1.263-2.942-3.115l.536-2.839c.097-.512.335-.983.684-1.352l2.914-3.086Z" clip-rule="evenodd"/>
         <path fill-rule="evenodd" d="M19.846 4.318a2.148 2.148 0 0 0-.437-.692 2.014 2.014 0 0 0-.654-.463 1.92 1.92 0 0 0-1.544 0 2.014 2.014 0 0 0-.654.463l-.546.578 2.852 3.02.546-.579a2.14 2.14 0 0 0 .437-.692 2.244 2.244 0 0 0 0-1.635ZM17.45 8.721 14.597 5.7 9.82 10.76a.54.54 0 0 0-.137.27l-.536 2.84c-.07.37.239.696.588.622l2.682-.567a.492.492 0 0 0 .255-.145l4.778-5.06Z" clip-rule="evenodd"/>

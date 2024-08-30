@@ -1,12 +1,16 @@
 <?php
 
 use App\Http\Controllers\CalibrateChartController;
+use App\Http\Controllers\CalibrationController;
+use App\Http\Controllers\DerivedController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\TestRunController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LineChartController;
+use App\Http\Controllers\OutlierController;
 use App\Http\Controllers\ShowController;
 use App\Http\Controllers\StandardChartController;
+use App\Http\Controllers\StandardisedController;
 use App\Livewire\Counter;
 
 
@@ -23,8 +27,10 @@ use App\Livewire\Counter;
 
 Route::get('/', function () {
 
-    return view('index',  [IndexController::class, 'table']);
+    return view('index',  [TestRunController::class, 'index']);
 });
+
+
 
 Route::get('/hello', function () {
     return 'Hello World';
@@ -34,7 +40,7 @@ Route::get('/table', function () {
     return view('table');
 });
 
-Route::get('/standard', function () {
+Route::get('/standardised', function () {
     return view('standardised');
 });
 
@@ -65,6 +71,14 @@ Route::get('/testrun', [TestRunController::class, 'index']);
 Route::resource('entry', 'EntryController');
 
 Route::get('/counter', Counter::class);
+
+Route::get('/standardised1', [StandardisedController::class, 'index']);
+
+Route::get('/outlier1', [OutlierController::class, 'index']);
+
+Route::get('/calibration1', [CalibrationController::class, 'index']);
+
+Route::get('/derived1', [DerivedController::class, 'index']);
 
 // Route::get('/testrun', function () {
 //     return view('testrun');
