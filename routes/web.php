@@ -84,7 +84,7 @@ Route::get('/derived1', [DerivedController::class, 'index']);
 //     return view('testrun');
 // });
 
-Route::get('/standardisedg', [LineChartController::class, 'lineChart']);
+Route::get('/standardisedg1', [LineChartController::class, 'lineChart']);
 
 Route::get('/standardg', [StandardChartController::class, 'standardChart']);
 

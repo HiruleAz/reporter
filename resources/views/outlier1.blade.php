@@ -278,7 +278,8 @@
       $var = $ss / ($count - 1);
       $sd = sqrt($var);
 
-      $ucl = $mdi - (-2 * (2 * $sd));
+      $ucl = $mdi + (-2 * (2 * $sd));
+      $lcl = $mdi - (-2 * (2 * $sd))
   ?>
 
   @foreach($entries as $entry)
@@ -290,7 +291,6 @@
           <div class="flex items-center justify-center border-[1px] ">{{$entry->cemsmg}}</div>
           <div class="flex items-center justify-center border-[1px] ">{{round($entry->srmmg, 2)}}</div>
           <div class="flex items-center justify-center border-[1px] ">{{($entry->srmmg - $entry->cemsmg)}}</div>
-          <div class="flex items-center justify-center border-[1px] ">test</div>
         @elseif (is_null($entry->sampleno))
           <div class="flex items-center justify-center border-[1px] ">Not used</div>
           <div class="flex items-center justify-center border-[1px] col-span-2 font-medium">Linearity Data [mg/mg3]</div>
@@ -298,7 +298,6 @@
           <div class="flex items-center justify-center border-[1px] ">N/A</div>
           <div class="flex items-center justify-center border-[1px] ">N/A</div>
           <div class="flex items-center justify-center border-[1px] ">N/A</div>
-          <div class="flex items-center justify-center border-[1px] ">test</div>
         @else
           <div class="flex items-center justify-center border-[1px] ">{{$entry->sampleno}}</div>
           <div class="flex items-center justify-center border-[1px] ">{{$entry->start}}</div>
@@ -308,12 +307,15 @@
           <div class="flex items-center justify-center border-[1px] ">{{round($entry->srmmg, 2)}}</div>
           <div class="flex items-center justify-center border-[1px] ">{{round(($entry->srmmg - $entry->cemsmg), 2)}}</div>
 
-          @if (($entry->srmmg - $entry->cemsmg) > 2.01 || ($entry->srmmg - $entry->cemsmg) < -2.04)
-            <div class="flex items-center justify-center border-[1px] ">test</div>
-          @else
-            <div class="flex items-center justify-center border-[1px] ">success</div>
-          @endif
         @endif
+
+        @if (($entry->srmmg - $entry->cemsmg) > 2.01 || ($entry->srmmg - $entry->cemsmg) < -2.04)
+            <div class="flex items-center justify-center border-[1px] font-bold text-red-700">Yes</div>
+          @elseif (is_null($entry->sampleno))
+            <div class="flex items-center justify-center border-[1px] ">N/A</div>
+          @else
+            <div class="flex items-center justify-center border-[1px] font-bold text-green-700">No</div>
+          @endif
         
   @endforeach
 
@@ -332,7 +334,7 @@
   <div class="col-span-4 flex items-center justify-center border-[1px] font-medium">Upper Central Limit at 2 Standard Deviation</div>
   <div class="flex items-center justify-center border-[1px] ">{{$ucl}}</div>
   <div class="col-span-4 flex items-center justify-center border-[1px] font-medium">Lower Central Limit at 2 Standard Deviation</div>
-  <div class="flex items-center justify-center border-[1px] ">0.00</div>
+  <div class="flex items-center justify-center border-[1px] ">{{$lcl}}</div>
 
     <!-- table body ends -->
 </div>

@@ -299,6 +299,12 @@
   $axi = 0;
   $ayi = 0;
   $count = 0;
+  $xx = 0;
+  $yy = 0;
+  $xyi = 0;
+  $xxi = 0;
+  $axyi = 0;
+  $axxi = 0;
 ?>
 
 @foreach($entries as $entry)
@@ -306,11 +312,14 @@
   <?php     
     $axi += 0;
     $ayi += 0;
+    $xyi += 0;
+    $xxi += 0;
     ?>
   @else 
   <?php     
     $axi += $entry->cemsmg;
     $ayi += $entry->srmmg;
+
     $count++;
     ?>
   @endif
@@ -323,6 +332,21 @@
 ?>
 
 @foreach($entries as $entry)
+  @if (is_null($entry->sampleno))
+  <?php
+    $xx += 0;
+    $yy += 0;
+  ?>
+  @else
+  <?php
+    $xx = $entry->cemsmg - $axi;
+    $yy = $entry->srmmg - $ayi;
+  ?>
+  @endif
+@endforeach
+
+
+@foreach($entries as $entry)
         
         @if ($entry->sampleno === 1 || $entry->sampleno === 2 || $entry->sampleno === 3)
           <div class="flex items-center justify-center border-[1px] ">{{$entry->sampleno}}</div>
@@ -330,10 +354,21 @@
           <div class="flex items-center justify-center border-[1px] ">{{$entry->cemsmg}}</div>
           <div class="flex items-center justify-center border-[1px] ">{{$entry->srmmg}}</div>
 
-          <div class="flex items-center justify-center border-[1px] ">test</div>
-          <div class="flex items-center justify-center border-[1px] ">test</div>
-          <div class="flex items-center justify-center border-[1px] ">test</div>
-          <div class="flex items-center justify-center border-[1px] ">test</div>
+          <?php
+            $xx = $entry->cemsmg - $axi;
+            $yy = $entry->srmmg - $ayi;
+
+            $xyi = $xx * $yy;
+            $xxi = $xx * $xx;
+
+            $axyi += $xyi;
+            $axxi += $xxi;
+          ?>
+
+          <div class="flex items-center justify-center border-[1px] ">{{round($xx, 2)}}</div>
+          <div class="flex items-center justify-center border-[1px] ">{{round($yy, 2)}}</div>
+          <div class="flex items-center justify-center border-[1px] ">{{round($xyi, 2)}}</div>
+          <div class="flex items-center justify-center border-[1px] ">{{round($xxi, 2)}}</div>
         @elseif (is_null($entry->sampleno))
           <div class="flex items-center justify-center border-[1px] ">Not used</div>
           <div class="flex items-center justify-center border-[1px] col-span-2 font-medium">Linearity Data [mg/mg3]</div>
@@ -351,17 +386,22 @@
           <div class="flex items-center justify-center border-[1px] ">{{$entry->cemsmg}}</div>
           <div class="flex items-center justify-center border-[1px] ">{{$entry->srmmg}}</div>
 
-          <?php 
-            $xi = 0;
-            $yi = 0;
-            $sxy = 0;
-            $xx = 0;
+          <?php
+            $xx = $entry->cemsmg - $axi;
+            $yy = $entry->srmmg - $ayi;
+
+            $xyi = $xx * $yy;
+            $xxi = $xx * $xx;
+
+            $axyi += $xyi;
+            $axxi += $xxi;
           ?>
+
           
-          <div class="flex items-center justify-center border-[1px] ">test</div>
-          <div class="flex items-center justify-center border-[1px] ">test</div>
-          <div class="flex items-center justify-center border-[1px] ">test</div>
-          <div class="flex items-center justify-center border-[1px] ">test</div>
+          <div class="flex items-center justify-center border-[1px] ">{{round($xx, 2)}}</div>
+          <div class="flex items-center justify-center border-[1px] ">{{round($yy, 2)}}</div>
+          <div class="flex items-center justify-center border-[1px] ">{{round($xyi, 2)}}</div>
+          <div class="flex items-center justify-center border-[1px] ">{{round($xxi, 2)}}</div>
 
         @endif
 
@@ -374,5 +414,5 @@
 
   <div class="col-span-3 flex items-center justify-center border-[1px] font-medium">Summation</div>
   <div class="col-span-4 flex items-center justify-center border-[1px]"></div>
-  <div class="flex items-center justify-center border-[1px] ">0.00</div>
-  <div class="flex items-center justify-center border-[1px] ">0.00</div>
+  <div class="flex items-center justify-center border-[1px] ">{{round($axyi, 2)}}</div>
+  <div class="flex items-center justify-center border-[1px] ">{{round($axxi, 2)}}</div>

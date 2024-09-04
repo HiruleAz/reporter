@@ -13,7 +13,7 @@ class StandardisedController extends Controller
         // $gastypes = Entry::distinct()->pluck('gastype');
 
         // $entries = Entry::all();
-        $entries = Entry::where('gastype', '=', 'SO2')->orderBy('idno', 'asc')->get();
+        $entries = Entry::where('gastype', '=', 'NOx')->orderBy('idno', 'asc')->get();
 
         
         return view('standardised1', compact('entries'));

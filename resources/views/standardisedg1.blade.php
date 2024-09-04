@@ -7,9 +7,28 @@
 <body>
     <div style="width: 80%; margin: auto;">
         <canvas id="lineChart"></canvas>
+        <h1>{{$}}</h1>
     </div>
 
-    @push('scripts')
+    @foreach($entries as $entry)
+  @if (is_null($entry->sampleno))
+  <?php     
+    $axi += 0;
+    $ayi += 0;
+    $xyi += 0;
+    $xxi += 0;
+    ?>
+  @else 
+  <?php     
+    $axi += $entry->cemsmg;
+    $ayi += $entry->srmmg;
+
+    $count++;
+    ?>
+  @endif
+    
+@endforeach
+
     <script>
         var ctx = document.getElementById('lineChart').getContext('2d');
         var myChart = new Chart(ctx, {
