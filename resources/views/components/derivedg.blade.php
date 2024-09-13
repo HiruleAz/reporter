@@ -5,12 +5,12 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div style="width: 60%; margin: auto;">
-        <canvas id="calibrateChart"></canvas>
+    <div style="width: 80%; margin: auto;">
+        <canvas id="derivedChart"></canvas>
     </div>
 
     <script>
-        var ctx = document.getElementById('calibrateChart').getContext('2d');
+        var ctx = document.getElementById('derivedChart').getContext('2d');
         // var xyValues = {
         //     {
 

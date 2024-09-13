@@ -15,4 +15,14 @@ class CalibrateChartController extends Controller
         ];
         return view('calibrationg', compact('data'));
     }
+
+    public function derivedChart()
+    {
+        // Replace this with your actual data retrieval logic
+        $data = [
+            'labels' => ['January', 'February', 'March', 'April', 'May'],
+            'data' => [65, 59, 80, 81, 56],
+        ];
+        return view('derivedg', compact('data'));
+    }
 }
