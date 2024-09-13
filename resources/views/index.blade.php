@@ -1,3 +1,21 @@
+<?php
+// Connect to the database
+$db = new PDO('mysql:host=localhost;dbname=enviro', 'root');
+
+// Define a query to retrieve data
+$query = $db->prepare('SELECT * FROM entries');
+$query->execute();
+
+// Fetch the data
+$data = $query->fetchAll(PDO::FETCH_ASSOC);
+
+require_once 'resources\views\components\raw1.blade.php';
+
+// Return the data in JSON format
+header('Content-Type: application/json');
+echo json_encode($data);
+?>
+
 <html>
 <head>
   <meta charset="utf-8">
@@ -231,8 +249,9 @@
       </div>
     </div>
   </div>
+
   <div id="table-container" selected class="flex-1">
-    <div id="x-raw" class="flex-1" ><x-raw></x-raw></div>
+    <div id="x-raw" class="flex-1"><x-raw1  :entries="$entries"></x-raw1></div>
     <div id="x-standardised" class="hidden flex-1"><x-standardised></x-standardised></div>
     <div id="x-outlier" class="hidden flex-1"><x-outlier></x-outlier></div>
     <div id="x-calibration" class="hidden flex-1"><x-calibration></x-calibration></div>

@@ -25,7 +25,7 @@ class TableController extends Controller
         $entries = Entry::where('gastype', '=', 'SO2')->orderBy('idno', 'asc')->get();
 
         
-        return view('testrun', compact('entries'));
+        return view('raw1', compact('entries'));
     }
 
     public function derived(){

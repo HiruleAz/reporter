@@ -47,7 +47,7 @@ Route::get('/warning', function () {
 
 Route::post('/testrun', [TestRunController::class, 'store']);
 
-Route::get('/testrun', [TableController::class, 'raw']);
+Route::get('/raw1', [TableController::class, 'raw']);
 
 Route::resource('entry', 'EntryController');
 
