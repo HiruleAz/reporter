@@ -63,9 +63,9 @@ Route::get('/derived1', [TableController::class, 'derived']);
 //     return view('testrun');
 // });
 
-Route::get('/standardisedg1', [LineChartController::class, 'lineChart']);
+Route::get('/standardisedg', [CalibrateChartController::class, 'standardisedChart']);
 
-Route::get('/standardg', [StandardChartController::class, 'standardChart']);
+Route::get('/outlierg', [CalibrateChartController::class, 'outlierChart']);
 
 Route::get('/calibrationg', [CalibrateChartController::class, 'calibrateChart']);
 

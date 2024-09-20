@@ -7,13 +7,13 @@ $query = $db->prepare('SELECT * FROM entries');
 $query->execute();
 
 // Fetch the data
-$data = $query->fetchAll(PDO::FETCH_ASSOC);
+$entries  = $query->fetchAll(PDO::FETCH_ASSOC);
 
-require_once 'resources\views\components\raw1.blade.php';
+// require_once 'resources\views\components\raw1.blade.php';
 
 // Return the data in JSON format
 header('Content-Type: application/json');
-echo json_encode($data);
+// echo json_encode($data);
 ?>
 
 <html>
@@ -251,7 +251,7 @@ echo json_encode($data);
   </div>
 
   <div id="table-container" selected class="flex-1">
-    <div id="x-raw" class="flex-1"><x-raw1  :entries="$entries"></x-raw1></div>
+    <div id="x-raw" class="flex-1"><x-raw></x-raw></div>
     <div id="x-standardised" class="hidden flex-1"><x-standardised></x-standardised></div>
     <div id="x-outlier" class="hidden flex-1"><x-outlier></x-outlier></div>
     <div id="x-calibration" class="hidden flex-1"><x-calibration></x-calibration></div>
@@ -272,11 +272,13 @@ echo json_encode($data);
   const graphButton = document.getElementById('graphs');
   const tableContainer = document.getElementById('table-container');
   const graphContainer = document.getElementById('graph-container');
+  const data = <?php echo json_encode($data); ?>;
 
 // Add event listeners
 tableButton.addEventListener('click', () => {
   tableContainer.style.display = 'block';
   graphContainer.style.display = 'none';
+
 });
 
 graphButton.addEventListener('click', () => {

@@ -5,6 +5,7 @@
 
 <div class="m-4 grid grid-cols-9 bg-gray-50 border border-1 mx-auto w-4/5">
   <!-- table head starts -->
+
   <div class="row-span-3 flex items-center justify-center border-[1px] font-medium">Sample</div>
   <div class="row-span-2 col-span-2 flex items-center justify-center border-[1px] font-medium">Date & Time</div>
   <div class="col-span-3 flex items-center justify-center border-[1px] font-medium">CEMS</div>
