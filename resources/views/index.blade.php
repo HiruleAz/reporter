@@ -89,7 +89,7 @@ header('Content-Type: application/json');
       </svg>Site 1
     </div>
 
-    <button id="print-btn" data-modal-target="print-modal" data-modal-toggle="print-modal" class="flex justify-center space-x-1  p-3 rounded-lg leading-tight text-lg font-semibold transition-all hover:bg-opacity-80 focus:bg-purple-800 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-gray-100 hover:shadow-xl hover:shadow-blue-gray-900/5 focus:text-white active:text-white outline-none bg-purple-400 hover:bg-purple-700" type="button">
+    <!-- <button id="print-btn" data-modal-target="print-modal" data-modal-toggle="print-modal" class="flex justify-center space-x-1  p-3 rounded-lg leading-tight text-lg font-semibold transition-all hover:bg-opacity-80 focus:bg-purple-800 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-gray-100 hover:shadow-xl hover:shadow-blue-gray-900/5 focus:text-white active:text-white outline-none bg-purple-400 hover:bg-purple-700" type="button">
       <svg class="w-6 h-6 text-gray-200 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
         <path fill-rule="evenodd" d="M8 3a2 2 0 0 0-2 2v3h12V5a2 2 0 0 0-2-2H8Zm-3 7a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h1v-4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v4h1a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2H5Zm4 11a1 1 0 0 1-1-1v-4h8v4a1 1 0 0 1-1 1H9Z" clip-rule="evenodd"/>
       </svg>Print Reports
@@ -97,9 +97,9 @@ header('Content-Type: application/json');
 
     <div id="print-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full transition-all">
       <div class="relative p-4 w-full max-w-md max-h-full">
-        <!-- Modal content -->
+      
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-            <!-- Modal header -->
+  
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t bg-blue-300 ">
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
                     Choose Reports To Print
@@ -111,7 +111,7 @@ header('Content-Type: application/json');
                     <span class="sr-only">Close modal</span>
                 </button>
             </div>
-            <!-- Modal body -->
+           
             <form class="p-4 md:p-5">
                 <div class="grid gap-4 mb-4 grid-cols-2">
                     <div class="col-span-2">
@@ -130,7 +130,7 @@ header('Content-Type: application/json');
             </form>
         </div>
       </div>
-    </div> 
+    </div>  -->
 
     <button id="add-btn" data-modal-target="add-modal" data-modal-toggle="add-modal" class="flex justify-center space-x-1  p-3 rounded-lg leading-tight text-lg font-semibold transition-all hover:bg-green-600 hover:bg-opacity-80 focus:bg-green-700 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-gray-100 hover:shadow-xl hover:shadow-blue-gray-900/5 focus:text-white active:text-white outline-none bg-green-400" type="button">
       <svg class="w-6 h-6 text-gray-200 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -263,7 +263,7 @@ header('Content-Type: application/json');
     <div id="x-standardisedg" class="hidden flex-1"><x-standardisedg></x-standardisedg></div>
     <div id="x-outlierg" class="hidden flex-1"><x-outlierg></x-outlierg></div>
     <div id="x-derivedg" class="hidden flex-1"><x-derivedg></x-derivedg></div>
-    <div id="x-warning" class="hidden flex-1"><x-warning></x-warning></div>
+    <div id="x-warning" class=" flex-1"><x-warning></x-warning></div>
   </div> 
 </div>
 
@@ -272,7 +272,6 @@ header('Content-Type: application/json');
   const graphButton = document.getElementById('graphs');
   const tableContainer = document.getElementById('table-container');
   const graphContainer = document.getElementById('graph-container');
-  const data = <?php echo json_encode($data); ?>;
 
 // Add event listeners
 tableButton.addEventListener('click', () => {

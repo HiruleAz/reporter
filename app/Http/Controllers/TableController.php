@@ -21,8 +21,8 @@ class TableController extends Controller
 
         // $gastypes = Entry::distinct()->pluck('gastype');
 
-        // $entries = Entry::all();
-        $entries = Entry::where('gastype', '=', 'SO2')->orderBy('idno', 'asc')->get();
+        $entries = Entry::all();
+        // $entries = Entry::where('gastype', '=', 'SO2')->orderBy('idno', 'asc')->get();
 
         
         return view('raw1', compact('entries'));

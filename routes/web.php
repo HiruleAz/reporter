@@ -8,6 +8,8 @@ use App\Http\Controllers\LineChartController;
 use App\Http\Controllers\ShowController;
 use App\Http\Controllers\StandardChartController;
 use App\Http\Controllers\TableController;
+use App\Http\Controllers\PrintController;
+use App\Http\Controllers\ListController;
 
 
 /*
@@ -63,15 +65,19 @@ Route::get('/derived1', [TableController::class, 'derived']);
 //     return view('testrun');
 // });
 
-Route::get('/standardisedg', [CalibrateChartController::class, 'standardisedChart']);
+Route::get('/standardisedgr', [CalibrateChartController::class, 'standardisedChart']);
 
-Route::get('/outlierg', [CalibrateChartController::class, 'outlierChart']);
+Route::get('/outliergr', [CalibrateChartController::class, 'outlierChart']);
 
-Route::get('/calibrationg', [CalibrateChartController::class, 'calibrateChart']);
+Route::get('/calibrationgr', [CalibrateChartController::class, 'calibrateChart']);
 
 
-Route::get('/derivedg', [CalibrateChartController::class, 'derivedChart']);
+Route::get('/derivedgr', [CalibrateChartController::class, 'derivedChart']);
 
 Route::get('google-line-chart', 'HomeController@googleLineChart');
 
-Route::get('chart', [ChartJSController::class, 'index']);
+Route::get('/chart', [ChartJSController::class, 'index']);
+
+Route::get('/print', [PrintController::class, 'printSelect']);
+
+Route::get('/list', [ListController::class, 'list']);

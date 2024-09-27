@@ -30,7 +30,7 @@ class CalibrateChartController extends Controller
 
         $entries = Entry::where('gastype', '=', 'SO2')->orderBy('idno', 'asc')->get();
 
-        return view('derivedg', compact('data'));
+        return view('derivedgr', compact('data'));
 
        
 
@@ -46,7 +46,7 @@ class CalibrateChartController extends Controller
 
         $entries = Entry::where('gastype', '=', 'SO2')->orderBy('idno', 'asc')->get();
 
-        return view('standardisedg', compact('data'));
+        return view('standardisedgr', compact('data'));
 
     }
 
@@ -60,7 +60,7 @@ class CalibrateChartController extends Controller
 
         $entries = Entry::where('gastype', '=', 'SO2')->orderBy('idno', 'asc')->get();
 
-        return view('outlierg', compact('entries'));
+        return view('outliergr', compact('entries'));
 
     }
 
@@ -74,7 +74,7 @@ class CalibrateChartController extends Controller
 
         $entries = Entry::where('gastype', '=', 'SO2')->orderBy('idno', 'asc')->get();
 
-        return view('someg', compact('data'));
+        return view('somegr', compact('data'));
 
        
 
