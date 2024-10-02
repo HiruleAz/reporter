@@ -6,9 +6,10 @@
       <option value="derived">Derived</option>
 </select>
 
-<button id="print" onclick="window.print();"  class="border-2 p-2">Press this to print</button>
+<button onclick="window.print();"  class="border-2 p-2">Press this to print</button>
+<button onclick="printDiv('printBlock')"  class="border-2 p-2">test print</button>
 
-<div>
+<div id="printBlock">
 <div id="raw" selected><x-raw></x-raw></div>
 <div id="derived" class="hidden"><x-derived></x-derived></div>
 <div id="standardised" class="hidden"><x-standardised></x-standardised></div>
@@ -41,3 +42,18 @@ selectElement.addEventListener('change', () => {
 
 });
 </script>
+
+
+<script>
+		function printDiv(printBlock){
+			var printContents = document.getElementById('printBlock').innerHTML;
+			var originalContents = document.body.innerHTML;
+
+			document.body.innerHTML = printContents;
+
+			window.print();
+
+			document.body.innerHTML = originalContents;
+
+		}
+	</script>

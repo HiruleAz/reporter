@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Station extends Model
 {
-    protected $idstation = 'idstations';
+    protected $station = 'stations';
 
 
     // protected $primaryKey = 'idno';

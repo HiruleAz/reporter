@@ -9,7 +9,7 @@ use App\Http\Controllers\ShowController;
 use App\Http\Controllers\StandardChartController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\PrintController;
-use App\Http\Controllers\ListController;
+use App\Http\Controllers\ListController;    
 
 
 /*
@@ -81,3 +81,7 @@ Route::get('/chart', [ChartJSController::class, 'index']);
 Route::get('/print', [PrintController::class, 'printSelect']);
 
 Route::get('/list', [ListController::class, 'list']);
+
+Route::get('/api/station/{stationId}', 'ListController@getStationData');
+
+Route::get('/stations/{id}', 'ListController@show');
