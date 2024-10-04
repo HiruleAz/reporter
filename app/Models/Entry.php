@@ -11,7 +11,10 @@ class Entry extends Model
 
 
     // protected $primaryKey = 'idno';
-    // protected $fillable = ['sampleno', 'sampleuse', 'start', 'end', 'gastype', 'cemsmg', 'cemsO2', 'cemsH2O', 'srmmg', 'srmO2', 'srmH2O'];
-
-    
+    protected $fillable = ['entryno', 'idno', 'sampleno', 'sampleuse', 'start', 'end', 'gastype', 'cemsmg', 'cemsO2', 'cemsH2O', 'scems', 'srmmg', 'srmO2', 'srmH2O', 'ssrm'];
+    public function station()
+{
+    return $this->belongsTo(Station::class);
+}
+    public $incrementing = true;
 }

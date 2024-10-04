@@ -12,7 +12,7 @@ class TableController extends Controller
         // $gastypes = Entry::distinct()->pluck('gastype');
 
         // $entries = Entry::all();
-        $entries = Entry::where('gastype', '=', 'SO2')->orderBy('idno', 'asc')->get();
+        $entries = Entry::where('gastype', '=', 'SO2')->where('idno', '=', 1)->orderBy('idno', 'asc')->get();
 
         
         return view('index', compact('entries'));
@@ -33,7 +33,7 @@ class TableController extends Controller
         // $gastypes = Entry::distinct()->pluck('gastype');
 
         // $entries = Entry::all();
-        $entries = Entry::where('gastype', '=', 'NOx')->orderBy('idno', 'asc')->get();
+        $entries = Entry::where('gastype', '=', 'NOx')->where('idno', '=', 1)->orderBy('idno', 'asc')->get();
 
         
         return view('derived1', compact('entries'));
@@ -44,7 +44,7 @@ class TableController extends Controller
         // $gastypes = Entry::distinct()->pluck('gastype');
 
         // $entries = Entry::all();
-        $entries = Entry::where('gastype', '=', 'SO2')->orderBy('idno', 'asc')->get();
+        $entries = Entry::where('gastype', '=', 'SO2')->where('idno', '=', 1)->orderBy('idno', 'asc')->get();
 
         
         return view('standardised1', compact('entries'));
@@ -55,7 +55,7 @@ class TableController extends Controller
         // $gastypes = Entry::distinct()->pluck('gastype');
 
         // $entries = Entry::all();
-        $entries = Entry::where('gastype', '=', 'SO2')->orderBy('idno', 'asc')->get();
+        $entries = Entry::where('gastype', '=', 'SO2')->where('idno', '=', 1)->orderBy('idno', 'asc')->get();
 
         
         return view('calibration1', compact('entries'));
@@ -65,7 +65,7 @@ class TableController extends Controller
         // $gastypes = Entry::distinct()->pluck('gastype');
 
         // $entries = Entry::all();
-        $entries = Entry::where('gastype', '=', 'SO2')->orderBy('idno', 'asc')->get();
+        $entries = Entry::where('gastype', '=', 'SO2')->where('idno', '=', 1)->orderBy('idno', 'asc')->get();
 
         
         return view('outlier1', compact('entries'));

@@ -1,4 +1,4 @@
-
+<script src="https://cdn.tailwindcss.com"></script>
 
 <div class="m-4 grid grid-cols-9 bg-gray-50 border border-1 mx-auto w-4/5">
 

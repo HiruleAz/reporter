@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CalibrateChartController;
+use App\Http\Controllers\EntryController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\TestRunController;
 use Illuminate\Support\Facades\Route;
@@ -9,7 +10,8 @@ use App\Http\Controllers\ShowController;
 use App\Http\Controllers\StandardChartController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\PrintController;
-use App\Http\Controllers\ListController;
+use App\Http\Controllers\ListController; 
+
 
 
 /*
@@ -81,3 +83,20 @@ Route::get('/chart', [ChartJSController::class, 'index']);
 Route::get('/print', [PrintController::class, 'printSelect']);
 
 Route::get('/list', [ListController::class, 'list']);
+
+Route::get('/api/station/{stationId}', 'ListController@getStationData');
+
+Route::get('/stations/{id}', 'ListController@show');
+
+Route::get('/list', [ListController::class, 'list']);
+
+
+Route::get('/add', [ListController::class, 'list']);
+
+Route::get('/import-excel', 'ExcelImportController@index')->name('import.excel');
+
+Route::post('/import-excel', 'ExcelImportController@import');
+
+Route::get('/import', [EntryController::class, 'import']);
+
+Route::post('/import', [EntryController::class, 'importExcelData']);

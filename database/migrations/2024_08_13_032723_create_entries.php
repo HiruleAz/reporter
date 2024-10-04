@@ -22,9 +22,11 @@ return new class extends Migration
             $table->double('cemsmg');
             $table->double('cemsO2');
             $table->double('cemsH2O');
+            $table->double('scems');
             $table->double('srmmg');
             $table->double('srmO2');
             $table->double('srmH2O');
+            $table->double('ssrm');
         });
     }
 
